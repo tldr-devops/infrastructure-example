@@ -16,11 +16,13 @@ terraform/environments/aws-account-id/us-east-2/management/vpc/default/terragrun
 terraform/environments/aws-account-id/us-east-2/prod/vpc/default/main.tf
 terraform/environments/aws-account-id/us-east-2/prod/vpc/default/terragrunt.hcl
 terraform/environments/aws-account-id/us-east-2/region.hcl
-terraform/modules/.gitkeep
+terraform/modules/aws/ec2/ami/variables.tf
+terraform/modules/aws/ec2/ami/outputs.tf
+terraform/modules/aws/ec2/ami/main.tf
 ```
 
 Time track:
-- [Filipp Frizzy](https://github.com/Friz-zy/) 15.0h
+- [Filipp Frizzy](https://github.com/Friz-zy/) 19.75h
 
 ## [Terraform](https://www.terraform.io/) and [Terragrunt](https://terragrunt.gruntwork.io)
 In this setup I use terraform with terragrunt for provisioning whole infrastructure.
