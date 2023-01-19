@@ -12,4 +12,3 @@ remote_state {
     dynamodb_table = "terraform_state"
   }
 }
-

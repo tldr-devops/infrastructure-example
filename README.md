@@ -9,6 +9,8 @@ terraform/environments/aws-account-id/backend.hcl
 terraform/environments/aws-account-id/global/management/.gitkeep
 terraform/environments/aws-account-id/us-east-2/dev/vpc/default/main.tf
 terraform/environments/aws-account-id/us-east-2/dev/vpc/default/terragrunt.hcl
+terraform/environments/aws-account-id/us-east-2/management/ec2/key_pair/terraform/main.tf
+terraform/environments/aws-account-id/us-east-2/management/ec2/key_pair/terraform/terragrunt.hcl
 terraform/environments/aws-account-id/us-east-2/management/s3/terraform_state/main.tf
 terraform/environments/aws-account-id/us-east-2/management/s3/terraform_state/terragrunt.hcl
 terraform/environments/aws-account-id/us-east-2/management/vpc/default/main.tf
@@ -16,13 +18,15 @@ terraform/environments/aws-account-id/us-east-2/management/vpc/default/terragrun
 terraform/environments/aws-account-id/us-east-2/prod/vpc/default/main.tf
 terraform/environments/aws-account-id/us-east-2/prod/vpc/default/terragrunt.hcl
 terraform/environments/aws-account-id/us-east-2/region.hcl
+terraform/environments/terragrunt.hcl
 terraform/modules/aws/ec2/ami/variables.tf
 terraform/modules/aws/ec2/ami/outputs.tf
 terraform/modules/aws/ec2/ami/main.tf
+terraform/modules/aws/ec2/terraform_key_pair/main.tf
 ```
 
 Time track:
-- [Filipp Frizzy](https://github.com/Friz-zy/) 19.75h
+- [Filipp Frizzy](https://github.com/Friz-zy/) 21.42h
 
 ## [Terraform](https://www.terraform.io/) and [Terragrunt](https://terragrunt.gruntwork.io)
 In this setup I use terraform with terragrunt for provisioning whole infrastructure.
