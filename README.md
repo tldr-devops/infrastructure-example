@@ -26,7 +26,7 @@ terraform/modules/aws/ec2/terraform_key_pair/main.tf
 ```
 
 Time track:
-- [Filipp Frizzy](https://github.com/Friz-zy/) 21.42h
+- [Filipp Frizzy](https://github.com/Friz-zy/) 28.25h
 
 ## [Terraform](https://www.terraform.io/) and [Terragrunt](https://terragrunt.gruntwork.io)
 In this setup I use terraform with terragrunt for provisioning whole infrastructure.
