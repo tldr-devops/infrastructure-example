@@ -5,13 +5,26 @@ But it can be extended for multiple regions, aws accounts and other clouds.
 Current files structure:
 ```
 ansible/ansible.cfg
+ansible/group_vars/all.yml
+ansible/inventory
+ansible/playbooks/users.yml
+ansible/roles/users/README.md
+ansible/roles/users/defaults/main.yml
+ansible/roles/users/handlers/main.yml
+ansible/roles/users/tasks/main.yml
 terraform/environments/aws-account-id/backend.hcl
 terraform/environments/aws-account-id/global/management/.gitkeep
+terraform/environments/aws-account-id/us-east-2/dev/ec2/instance/example/main.tf
+terraform/environments/aws-account-id/us-east-2/dev/ec2/instance/example/output.tf
+terraform/environments/aws-account-id/us-east-2/dev/ec2/instance/example/terragrunt.hcl
+terraform/environments/aws-account-id/us-east-2/dev/ec2/instance/example/variables.tf
 terraform/environments/aws-account-id/us-east-2/dev/vpc/default/main.tf
+terraform/environments/aws-account-id/us-east-2/dev/vpc/default/output.tf
 terraform/environments/aws-account-id/us-east-2/dev/vpc/default/terragrunt.hcl
 terraform/environments/aws-account-id/us-east-2/management/ec2/key_pair/terraform/main.tf
 terraform/environments/aws-account-id/us-east-2/management/ec2/key_pair/terraform/terragrunt.hcl
 terraform/environments/aws-account-id/us-east-2/management/s3/terraform_state/main.tf
+terraform/environments/aws-account-id/us-east-2/management/s3/terraform_state/output.tf
 terraform/environments/aws-account-id/us-east-2/management/s3/terraform_state/terragrunt.hcl
 terraform/environments/aws-account-id/us-east-2/management/vpc/default/main.tf
 terraform/environments/aws-account-id/us-east-2/management/vpc/default/terragrunt.hcl
@@ -19,9 +32,9 @@ terraform/environments/aws-account-id/us-east-2/prod/vpc/default/main.tf
 terraform/environments/aws-account-id/us-east-2/prod/vpc/default/terragrunt.hcl
 terraform/environments/aws-account-id/us-east-2/region.hcl
 terraform/environments/terragrunt.hcl
-terraform/modules/aws/ec2/ami/variables.tf
-terraform/modules/aws/ec2/ami/outputs.tf
 terraform/modules/aws/ec2/ami/main.tf
+terraform/modules/aws/ec2/ami/outputs.tf
+terraform/modules/aws/ec2/ami/variables.tf
 terraform/modules/aws/ec2/terraform_key_pair/main.tf
 ```
 
