@@ -25,12 +25,13 @@ dependency "default_vpc" {
   mock_outputs = {
     vpc_id = "default_vpc_id"
     subnet_id = "default_subnet_id"
+    dev_security_group_name = "dev"
   }
 }
 
 inputs = {
   terraform_key_pair_id = dependency.terraform_key_pair.outputs.id
   terraform_key_pair_private_key_openssh = dependency.terraform_key_pair.outputs.private_key_openssh
-  vpc_id = dependency.default_vpc.outputs.vpc_id
+  security_groups = [dependency.default_vpc.outputs.dev_security_group_name]
   subnet_id = dependency.default_vpc.outputs.subnet_id
 }

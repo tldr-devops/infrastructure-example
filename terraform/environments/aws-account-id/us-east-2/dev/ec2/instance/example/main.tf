@@ -2,42 +2,12 @@ module "ubuntu_ami" {
   source = "../../../../../../../modules/aws/ec2/ami"
 }
 
-# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group
-resource "aws_security_group" "dev_security_group" {
-  name        = "dev_security_group"
-  description = "Allow SSH"
-  vpc_id      = var.vpc_id
-
-  ingress {
-    description = "SSH"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  /* ingress {
-    description = "Same group"
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    self = true
-  } */
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-}
-
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
 resource "aws_instance" "dev_example" {
   ami                         = module.ubuntu_ami.id
   instance_type               = "t3.nano"
   key_name                    = var.terraform_key_pair_id
-  security_groups             = [aws_security_group.dev_security_group.name]
+  vpc_security_group_ids      = var.security_groups
   subnet_id                   = var.subnet_id
   associate_public_ip_address = true
 
