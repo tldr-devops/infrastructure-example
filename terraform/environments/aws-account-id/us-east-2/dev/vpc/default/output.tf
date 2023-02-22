@@ -8,7 +8,7 @@ output "subnet_id" {
   description = "The ID of the default subnet in default vpc"
 }
 
-output "dev_security_group_name" {
-  value       = aws_security_group.dev.name
-  description = "The name of the 'dev' security group"
+output "dev_security_group_id" {
+  value       = aws_security_group.dev.id
+  description = "The ID of the 'dev' security group"
 }

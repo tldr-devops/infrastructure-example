@@ -7,7 +7,7 @@ resource "aws_instance" "dev_example" {
   ami                         = module.ubuntu_ami.id
   instance_type               = "t3.nano"
   key_name                    = var.terraform_key_pair_id
-  vpc_security_group_ids      = var.security_groups
+  vpc_security_group_ids      = var.vpc_security_group_ids
   subnet_id                   = var.subnet_id
   associate_public_ip_address = true
 

@@ -32,6 +32,6 @@ dependency "default_vpc" {
 inputs = {
   terraform_key_pair_id = dependency.terraform_key_pair.outputs.id
   terraform_key_pair_private_key_openssh = dependency.terraform_key_pair.outputs.private_key_openssh
-  security_groups = [dependency.default_vpc.outputs.dev_security_group_name]
+  vpc_security_group_ids = [dependency.default_vpc.outputs.dev_security_group_id]
   subnet_id = dependency.default_vpc.outputs.subnet_id
 }

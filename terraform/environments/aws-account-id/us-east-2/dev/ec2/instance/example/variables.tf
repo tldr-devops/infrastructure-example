@@ -13,8 +13,8 @@ variable "subnet_id" {
   type        = string
 }
 
-variable "security_groups" {
-  description = "List of security groups for attaching into instance"
+variable "vpc_security_group_ids" {
+  description = "List of IDs of security groups for attaching into instance"
   type        = list
   default     = []
 }
